@@ -1,0 +1,36 @@
+/*
+PALETTE :
+
+Dark Background : #303234
+Late evening blue : #45484B
+Moonlight brown : #696758
+Moonlight cloud : #C5BC8E
+Light Moon : #EEE6AB
+*/
+
+body {
+  background-color: #303234;
+  font-family: "Roboto", sans-serif;
+  /*overflow: hidden;*/
+  /*overflow-style:none;*/
+}
+
+.slideshow-wrapper {
+  position: absolute;
+  top:0; left:0;
+  width: 100%;height:100%;
+  overflow: hidden;
+  overflow-style: none;
+}
+
+.slideshow {
+  position: absolute; z-index:0; top:0;
+  list-style: none; margin: 0;
+  padding: 160px 0px 20px 0px;
+  transition: transform 0.5s ease-in-out;
+}
+.slideshow li {
+  position: relative;
+  height: 74vh; width: 99vw;
+  margin: 0; padding: 0;
+}

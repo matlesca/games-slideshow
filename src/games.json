@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Hello !",
+      "type": "intro",
+      "date": "13/06/1990",
+      "bckColor": "#C5BC8E",
+      "description" : "This site showcases a few games I made between 2007 and 2012 using Game Maker."
+    },
+    {
+      "name": "Poligon",
+      "type": "game",
+      "date": "11/11/2007",
+      "bckColor": "#40ac68",
+      "description" : "Puzzle game based on the GMPhysics library. You have to guide small balls throughout the levels using mouse-drawn poligons. The levels make use of gravity, speed, fire/water/ice interaction."
+    },
+    {
+      "name": "Little miss sunshine",
+      "type": "game",
+      "date": "06/06/2008",
+      "bckColor": "#cfdb67",
+      "description" : "Very basic shmup game, inspired by the self-titled movie. You control the minivan of Olive's family and got to avoid other vehicles on the road. The landscape elements appear in sync with the music ."
+    },
+    {
+      "name": "Missed the boat",
+      "type": "game",
+      "date": "08/08/2008",
+      "bckColor": "#366282",
+      "description" : "Fishing game inspired by the self-title music from Modest Mouse."
+    },
+    {
+      "name": "Space Oddity",
+      "type": "game",
+      "date": "08/08/2009",
+      "bckColor": "#af8a54",
+      "description" : "Shmup game based on Bowies music. In the first part of the game you prepare the rocket before launch, adding bonuses like speed, resistance, etc. Once in space the goal is to clean the waste left by broken satellites."
+    },
+    {
+      "name": "A Chinese Story",
+      "type": "game",
+      "date": "10/10/2010",
+      "bckColor": "#c95858",
+      "description" : "Platformer game. It tells the story of a youg farmer who participates in the communist revolution led by Mao in the early 20st century."
+    },
+    {
+      "name": "Illium",
+      "type": "game",
+      "date": "05/05/2012",
+      "bckColor": "#709e9d",
+      "description" : "Shooter game were you need to protect a city from incoming tanks/rockets. It is an adaptation of the story from Homer, but in a futuristic world."
+    }
+]
