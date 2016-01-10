@@ -1,14 +1,15 @@
-.slider-content {
+.slide-content {
   position: absolute; display: table;
-  top:0;
-  width: 93vw; height: 70vh;
-  margin: 1vh 3vw;
+  /*top:0;*/
+  width: 93vw; height: 77vh;
+  margin: 0 3vw;
   border-radius: 10px;
   background-color: #343638;
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.4);
   cursor: pointer; cursor: hand;
 }
-.slider-content.current {cursor: default; pointer-events: none;}
+.slide-content.current {cursor: default; pointer-events: none;}
+
 .content-wrapper {
   position: relative; display: table-cell;
   vertical-align: middle;
@@ -27,4 +28,8 @@
 
 @media only screen and (max-width: 768px) {
   .content-wrapper {padding:0 5% 0 5%;}
+  .slide-content {
+    width: 98vw; height: 80vh;
+    margin: 0 1vw;
+  }
 }

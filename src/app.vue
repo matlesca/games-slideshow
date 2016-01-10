@@ -1,13 +1,13 @@
 <template>
-  <div class="slideshow-wrapper loaded no-touch">
-
+  <div class="slideshow-wrapper">
     <timeline class="timeline-bar" :games="games" v-on:select-game="selectGame"></timeline>
-    <ol class="slideshow" style="transform: translateY({{currentOffset}})">
-  	   <li class="visible" v-for="game in games">
-  	      <slider :game="game" :rank="$index" v-on:select-game="selectGame" id="slider-{{$index}}" class="slider-content" v-bind:class="{current:($index === selectedGame)}"></slider>
-  		 </li>
-  	</ol>
-    {{paddingValues}}
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+    	   <div v-for="game in games" class="swiper-slide">
+    	      <slider :game="game" :rank="$index" v-on:select-game="selectGame" class="slide-content" v-bind:class="{current:($index === mySwiper.activeIndex)}"></slider>
+    		 </div>
+    	</div>
+    </div>
 
   </div>
 
@@ -18,38 +18,43 @@
   import timeline from './timeline.vue'
   import loadGames from './games.json'
 
+  import Swiper from 'swiper'
+  import 'swiper/dist/css/swiper.css'
+
   export default {
     replace: false,
     methods: {
       selectGame: function (gRank) {
-        this.selectedGame = gRank
-        this.$broadcast('select-slide', this.selectedGame)
-        this.currentOffset = this.offsetValues[this.selectedGame]
+        this.mySwiper.slideTo(gRank, 500)
+      },
+      onSlideChange: function (msp) {
+        this.$broadcast('select-slide', msp.activeIndex)
+      },
+      pressKey: function (event) {
+        if (event.keyCode === 37) {
+          this.mySwiper.slidePrev(true, 500)
+        } else if (event.keyCode === 39) {
+          this.mySwiper.slideNext(true, 500)
+        }
       }
-    },
-    created: function () {
-      this.selectedGame = 0
     },
     ready: function () {
-      var delta
-      var retTab = []
-      for (var ii = 0; ii < this.games.length; ii++) {
-        if (ii === 0) {
-          delta = -20
-        } else {
-          delta = -Math.floor(document.getElementById('slider-' + ii).getBoundingClientRect().top - document.getElementById('slider-0').getBoundingClientRect().top)
-        }
-        retTab.push(delta + 'px')
-      }
-      this.offsetValues = retTab
+      this.mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'vertical',
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        keyboardControl: true,
+        mousewheelControl: true,
+        onSlideChangeStart: this.onSlideChange
+      })
+      window.addEventListener('keyup', this.pressKey)
     },
     data () {
       return {
         games: loadGames,
-        selectedGame: 0,
-        paddingSlideshow: 0,
-        currentOffset: '-20px',
-        offsetValues: []
+        mySwiper: 0
       }
     },
     components: {slider, timeline}

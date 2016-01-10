@@ -56,24 +56,10 @@
         if (this.selectedGame < this.games.length - 1) {
           this.selectDate(this.selectedGame + 1)
         }
-      },
-      pressKey: function (event) {
-        if (event.keyCode === 37 || event.keyCode === 38) {
-          this.previous()
-        } else if (event.keyCode === 39 || event.keyCode === 40) {
-          this.next()
-        }
       }
     },
     created: function () {
       this.selectedGame = 0
-      window.addEventListener('keyup', this.pressKey)
-      window.addEventListener('keydown', function (e) {
-        // space and arrow keys
-        if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-          e.preventDefault()
-        }
-      }, false)
       for (var ii = 0; ii < this.games.length; ii++) {
         if (ii === 0) {
           this.shiftGames.push(0)

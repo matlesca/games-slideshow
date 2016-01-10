@@ -8,24 +8,21 @@
 </template>
 
 <script type="text/javascript">
-  import './slider.css'
+	import './slider.css'
 
-  export default {
-    replace: false,
-    props: ['game', 'rank'],
-    methods: {
-      selectSlide: function () {
-        this.$dispatch('select-game', this.rank)
-      }
-    },
-    created: function () {
-      this.currentSlide = 0
-    },
-    data () {
-      return {
-        text: 'vue'
-      }
-    }
-  }
+	export default {
+		replace: false,
+		props: ['game', 'rank'],
+		methods: {
+				selectSlide: function () {
+					this.$dispatch('select-game', this.rank)
+				}
+			},
+			data () {
+				return {
+					text: 'vue'
+	      }
+	    }
+		}
 
 </script>
