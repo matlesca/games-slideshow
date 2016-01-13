@@ -2,11 +2,11 @@
   <div class="timeline-center">
     <div class="events-wrapper">
       <div class="events">
-        <em class="month-mobile" v-if="games[selectedGame].type === 'game'">{{games[selectedGame].date | full-month-year}}</em>
-        <em class="month-mobile" v-if="games[selectedGame].type === 'info'">{{games[selectedGame].game}}</em>
+        <em class="month-mobile" v-if="games[selectedGame].hash !== 'intro'">{{games[selectedGame].date | full-month-year}}</em>
+        <em class="month-mobile" v-if="games[selectedGame].hash === 'intro'">{{games[selectedGame].game}}</em>
         <ol>
           <li v-for="game in games">
-            <a href v-on:click.prevent="selectDate($index)" v-if="games[$index].type === 'game'" v-bind:style="{left:shiftGames[$index]}" v-bind:class="{'selected':($index === selectedGame), 'older-event':($index < selectedGame)}">
+            <a href v-on:click.prevent="selectDate($index)" v-if="games[$index].hash !== 'intro'" v-bind:style="{left:shiftGames[$index]}" v-bind:class="{'selected':($index === selectedGame), 'older-event':($index < selectedGame)}">
               {{game.date | month-year}}
             </a>
           </li>

@@ -3,7 +3,7 @@
     <timeline class="timeline-bar" :games="games" v-on:select-game="selectGame"></timeline>
     <div class="swiper-container">
       <div class="swiper-wrapper">
-    	   <div v-for="game in games" class="swiper-slide">
+    	   <div v-for="game in games" class="swiper-slide" data-hash="{{game.hash}}">
     	      <slider :game="game" :rank="$index" v-on:select-game="selectGame" class="slide-content" v-bind:class="{current:($index === mySwiper.activeIndex)}"></slider>
     		 </div>
     	</div>
@@ -47,7 +47,8 @@
         spaceBetween: 0,
         keyboardControl: true,
         mousewheelControl: true,
-        onSlideChangeStart: this.onSlideChange
+        onSlideChangeStart: this.onSlideChange,
+        hashnav: true
       })
       window.addEventListener('keyup', this.pressKey)
     },
