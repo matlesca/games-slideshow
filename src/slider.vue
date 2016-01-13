@@ -17,12 +17,7 @@
 				selectSlide: function () {
 					this.$dispatch('select-game', this.rank)
 				}
-			},
-			data () {
-				return {
-					text: 'vue'
-	      }
-	    }
+			}
 		}
 
 </script>
