@@ -17,12 +17,19 @@ html, body {
   padding: 0;
 }
 
-.swiper-container {
-  width: 99vw; height: 79vh;
+.vertical-slide {
+  width: 100vw; height: 79vh;
   padding: 140px 0px 20px 0px;
   margin-left: auto;
   margin-right: auto;
 }
+.horizontal-slide {
+  width: 100vw; height: 79vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.horizontal-slide .swiper-slide {width:90vw;}
 @media only screen and (max-width: 768px) {
-  .swiper-container {padding-top:100px;height: 80vh;}
+  .vertical-slide {padding-top:100px;height: 80vh;}
+  .horizontal-slide .swiper-slide {width:92vw;}
 }

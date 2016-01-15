@@ -1,8 +1,14 @@
 <template>
-	<div class="swiper-container">
+	<div class="vertical-slide swiper-container">
 		<div class="swiper-wrapper">
-			 <div v-for="game in games" class="swiper-slide" data-hash="{{game.hash}}">
-					<slider :game="game" :rank="$index" class="slide-content" v-bind:class="{current:($index === mySwiper.activeIndex)}"></slider>
+			 <div class="swiper-slide" v-for="game in games" data-hash="{{game.hash}}">
+				 	<div class="horizontal-slide hor-{{$index}} swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" v-for="slide in game.slides">
+								<slider :game="game" :rank="games.indexOf(game)" :slide="slide" class="slide-content current-line" v-if="horizontalSwipers" v-bind:class="{'current-line':(games.indexOf(game) === verticalSwiper.activeIndex)}"></slider>
+							</div>
+						</div>
+				 	</div>
 			 </div>
 		</div>
 	</div>
@@ -23,24 +29,43 @@
         this.$dispatch('select-game', msp.activeIndex)
       }
 		},
+		created: function () {
+
+		},
 		ready: function () {
-      this.mySwiper = new Swiper('.swiper-container', {
+      this.verticalSwiper = new Swiper('.vertical-slide', {
         direction: 'vertical',
         speed: 500,
-        slidesPerView: 1,
+				slidesPerView: 'auto',
+        centeredSlides: true,
         spaceBetween: 0,
         keyboardControl: true,
         mousewheelControl: true,
         onSlideChangeStart: this.onSlideChange,
         hashnav: true
       })
+			for (var ii = 0; ii < this.games.length; ii++) {
+				this.horizontalSwipers.push(
+					new Swiper('.hor-' + ii, {
+						direction: 'horizontal',
+						speed: 500,
+						slidesPerView: 'auto',
+						centeredSlides: true,
+						spaceBetween: 0,
+						keyboardControl: true,
+						nested: true
+					})
+				)
+			}
 			this.$on('select-slide', function (gRank) {
-				this.mySwiper.slideTo(gRank, 500)
+				this.verticalSwiper.slideTo(gRank, 500)
 			})
     },
 		data () {
       return {
-        mySwiper: 0
+        verticalSwiper: 0,
+				horizontalSwipers: [],
+				sliderData: []
       }
     }
 	}

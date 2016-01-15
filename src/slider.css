@@ -1,27 +1,26 @@
-.slide-content {
+ .slide-content {
   position: absolute; display: table;
   /*top:0;*/
-  width: 93vw; height: 77vh;
-  margin: 0 3vw;
+  width: 86vw; height: 77vh;
+  margin: 0 2vw;
   border-radius: 10px;
   background-color: #343638;
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.4);
   cursor: pointer; cursor: hand;
 }
-.slide-content.current {cursor: default; pointer-events: none;}
+.slide-content.current-line {cursor: default; pointer-events: none;}
 
 .content-wrapper {
   position: relative; display: table-cell;
   vertical-align: middle;
   text-align: center;
   padding:0 20% 0 20%;
-
   /* hide the slide content if the slide is not selected/visible */
   opacity: 0;
   border-radius: inherit;
   transition: opacity 0.5s ease-in-out;
 }
-.current .content-wrapper {
+.current-line .content-wrapper {
   opacity:1
 }
 
@@ -29,7 +28,7 @@
 @media only screen and (max-width: 768px) {
   .content-wrapper {padding:0 5% 0 5%;}
   .slide-content {
-    width: 98vw; height: 80vh;
-    margin: 0 1vw;
+    width: 90vw; height: 80vh;
+    margin: 0 2vw;
   }
 }
