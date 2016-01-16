@@ -5,7 +5,7 @@
       "date": "13/06/1990",
       "bckColor": "#C5BC8E",
       "slides" : [
-        {"type" : "info", "content" : "This site showcases a few games I made between 2007 and 2012 using Game Maker."}
+        {"type" : "info", "content" : "This site showcases a few games I made between 2007 and 2012 using Game Maker. You can download them freely (run on Windows only)."}
       ]
     },
     {
@@ -13,6 +13,7 @@
       "hash": "poligon",
       "date": "11/11/2007",
       "bckColor": "#40ac68",
+      "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Poligon.zip",
       "slides" : [
         {"type" : "info", "content" : "Puzzle game based on the GMPhysics library. You have to guide small balls throughout the levels using mouse-drawn poligons. The levels make use of gravity, speed, fire/water/ice interaction."}
       ]
@@ -22,6 +23,7 @@
       "hash": "little-miss-sunshine",
       "date": "06/06/2008",
       "bckColor": "#cfdb67",
+      "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Little%20Miss%20Sunshine%20-%20le%20jeu.zip",
       "slides" : [
         {"type" : "info", "content" : "Very basic shmup game, inspired by the self-titled movie. You control the minivan of Olive's family and got to avoid other vehicles on the road. The landscape elements appear in sync with the music."}
       ]
@@ -31,8 +33,9 @@
       "hash": "missed-the-boat",
       "date": "08/08/2008",
       "bckColor": "#366282",
+      "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Missed%20the%20Boat.zip",
       "slides" : [
-        {"type" : "info", "content" : "Fishing game inspired by the self-title music from Modest Mouse."},
+        {"type" : "info", "content" : "Fishing game inspired by the self-titled music from Modest Mouse."},
         {"type" : "info", "content" : "Second slide !!"},
         {"type" : "info", "content" : "Third slide !!!"}
       ]
@@ -42,6 +45,7 @@
       "hash": "space-oddity",
       "date": "08/08/2009",
       "bckColor": "#af8a54",
+      "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Space%20Oddity%20-%20the%20game.zip",
       "slides" : [
         {"type" : "info", "content" : "Shmup game based on Bowies music. In the first part of the game you prepare the rocket before launch, adding bonuses like speed, resistance, etc. Once in space the goal is to clean the waste left by broken satellites."}
       ]
@@ -51,6 +55,7 @@
       "hash": "a-chinese-story",
       "date": "10/10/2010",
       "bckColor": "#c95858",
+      "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/A%20chinese%20Story%20-%20Une%20histoire%20chinoise.zip",
       "slides" : [
         {"type" : "info", "content" : "Platformer game. It tells the story of a youg farmer who participates in the communist revolution led by Mao in the early 20st century."},
         {"type" : "info", "content" : "Second slide !!"}
@@ -61,6 +66,7 @@
       "hash": "illium",
       "date": "05/05/2012",
       "bckColor": "#709e9d",
+      "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Ilium_EN.zip",
       "slides" : [
         {"type" : "info", "content" : "Shooter game were you need to protect a city from incoming tanks/rockets. It is an adaptation of the story from Homer, but in a futuristic world."}
       ]

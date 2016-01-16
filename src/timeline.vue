@@ -2,8 +2,8 @@
   <div class="timeline-center">
     <div class="events-wrapper">
       <div class="events">
+        <em class="month-mobile" v-if="games[selectedGame].hash === 'intro'">Welcome</em>
         <em class="month-mobile" v-if="games[selectedGame].hash !== 'intro'">{{games[selectedGame].date | full-month-year}}</em>
-        <em class="month-mobile" v-if="games[selectedGame].hash === 'intro'">{{games[selectedGame].game}}</em>
         <ol>
           <li v-for="game in games">
             <a href v-on:click.prevent="selectDate($index)" v-if="games[$index].hash !== 'intro'" v-bind:style="{left:shiftGames[$index]}" v-bind:class="{'selected':($index === selectedGame), 'older-event':($index < selectedGame)}">
@@ -17,7 +17,7 @@
     </div> <!-- .events-wrapper -->
   </div> <!-- .timeline-center -->
 
-  <ul class="timeline-navigation">
+  <!-- <ul class="timeline-navigation">
     <li>
       <a class="prev" v-bind:class="{inactive:(selectedGame === 0)}" v-on:click.prevent="previous" >
         <svg viewBox="0 0 100 70" preserveAspectRatio="none">
@@ -32,7 +32,7 @@
         </svg>
       </a>
     </li>
-  </ul>
+  </ul> -->
 </template> <!-- .timeline-bar -->
 
 <script type="text/javascript">
@@ -44,7 +44,7 @@
     methods: {
       selectDate: function (gRank) {
         this.selectedGame = gRank
-        this.$dispatch('select-game', gRank)
+        this.$dispatch('select-game', [gRank, 0])
         this.shiftLine = Math.floor(100 * (gRank) / (this.games.length)) + '%'
       },
       previous: function () {
@@ -70,9 +70,9 @@
       this.shiftLine = 0
     },
     events: {
-      'select-slide': function (gRank) {
-        this.selectedGame = gRank
-        this.shiftLine = Math.floor(100 * (gRank) / (this.games.length)) + '%'
+      'select-slide': function (locTab) {
+        this.selectedGame = locTab[0]
+        this.shiftLine = Math.floor(100 * (locTab[0]) / (this.games.length)) + '%'
       }
     },
     data () {

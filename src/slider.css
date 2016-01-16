@@ -4,29 +4,68 @@
   width: 86vw; height: 77vh;
   margin: 0 2vw;
   border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   background-color: #343638;
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.4);
   cursor: pointer; cursor: hand;
 }
-.slide-content.current-line {cursor: default; pointer-events: none;}
 
 .content-wrapper {
   position: relative; display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  padding:0 20% 0 20%;
   /* hide the slide content if the slide is not selected/visible */
   opacity: 0;
   border-radius: inherit;
   transition: opacity 0.5s ease-in-out;
 }
-.current-line .content-wrapper {
-  opacity:1
+
+
+.vslide.swiper-slide-active .slide-content, .vslide.swiper-slide-active .content-wrapper {opacity: 1}
+.vslide.swiper-slide-active .hslide.swiper-slide-active .slide-content {cursor: default;}
+.hslide.swiper-slide-active .slide-content {opacity: 1;}
+
+.table-wrap {position: relative; width: 100%; height: 100%; display: table;}
+.content-center {
+  position: relative; display: table-cell;
+  width: 60%; height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  padding:0 20% 0 20%;
+}
+.scroll-bottom-info {
+  position: absolute; bottom: 20px;
+  width: 100%; text-align: center;
+}
+.scroll-right-info {
+  position: absolute; right: 20px; top:50%;
+  margin-top:-25px;
+}
+.scroll-left-info {
+  position: absolute; left: 20px; top:50%;
+  margin-top:-25px;
 }
 
 
+.dl-button button {
+  position: absolute; left: 50%; bottom: 50px;
+  margin-left: -100px;
+  width:80% ; max-width:200px; height:50px;
+  font-size: 1rem; text-align: center;
+  text-decoration: none;
+  color: initial;
+  background: none;
+  border: solid black 2px;
+  cursor: pointer;
+  overflow:hidden;
+}
+.dl-button svg {width:20px; height:20px; position: absolute; left:50%; margin-left:-10px;transition: transform 0.2s ease; transform: translateY(-10vh);}
+.dl-button span {display: inline-block; transition: transform 0.2s ease; transform: translateY(0);}
+.dl-button:hover svg {transform: translateY(0);}
+.dl-button:hover span {transform: translateY(10vh);}
+
 @media only screen and (max-width: 768px) {
   .content-wrapper {padding:0 5% 0 5%;}
+  .scroll-bottom-info span {display:none}
   .slide-content {
     width: 90vw; height: 80vh;
     margin: 0 2vw;

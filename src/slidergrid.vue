@@ -1,11 +1,11 @@
 <template>
-	<div class="vertical-slide swiper-container">
+	<div class="vertical-slider swiper-container">
 		<div class="swiper-wrapper">
-			 <div class="swiper-slide" v-for="game in games" data-hash="{{game.hash}}">
-				 	<div class="horizontal-slide hor-{{$index}} swiper-container">
+			 <div class="swiper-slide vslide" v-for="game in games" data-hash="{{game.hash}}">
+				 	<div class="horizontal-slider swiper-container hor-{{$index}}">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide" v-for="slide in game.slides">
-								<slider :game="game" :rank="games.indexOf(game)" :slide="slide" class="slide-content current-line" v-if="horizontalSwipers" v-bind:class="{'current-line':(games.indexOf(game) === verticalSwiper.activeIndex)}"></slider>
+							<div class="swiper-slide hslide" v-for="slide in game.slides">
+								<slider :game="game" :rank="games.indexOf(game)" :slide="slide" class="slide-content"></slider>
 							</div>
 						</div>
 				 	</div>
@@ -26,14 +26,16 @@
 		components: {slider},
 	  methods: {
       onSlideChange: function (msp) {
-        this.$dispatch('select-game', msp.activeIndex)
+				if (this.horizontalSwipers.length) {
+					this.$dispatch('select-game', [msp.activeIndex, this.horizontalSwipers[msp.activeIndex].activeIndex])
+				} else {
+					// case when a slide change occurs before horizontal swipers are instanciated
+					this.$dispatch('select-game', [msp.activeIndex, 0])
+				}
       }
 		},
-		created: function () {
-
-		},
 		ready: function () {
-      this.verticalSwiper = new Swiper('.vertical-slide', {
+      this.verticalSwiper = new Swiper('.vertical-slider', {
         direction: 'vertical',
         speed: 500,
 				slidesPerView: 'auto',
@@ -57,8 +59,9 @@
 					})
 				)
 			}
-			this.$on('select-slide', function (gRank) {
-				this.verticalSwiper.slideTo(gRank, 500)
+			this.$on('select-slide', function (locTab) {
+				this.verticalSwiper.slideTo(locTab[0], 500)
+				this.horizontalSwipers[locTab[0]].slideTo(locTab[1], 500)
 			})
     },
 		data () {

@@ -15,8 +15,8 @@
   export default {
     replace: false,
     methods: {
-      selectGame: function (gRank) {
-        this.$broadcast('select-slide', gRank)
+      selectGame: function (locTab) {
+        this.$broadcast('select-slide', locTab)
       }
     },
     data () {
