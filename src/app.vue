@@ -1,8 +1,8 @@
 <template>
+  
   <div class="slideshow-wrapper">
     <timeline class="timeline-bar" :games="games" v-on:select-game="selectGame"></timeline>
     <slider-grid :games="games" v-on:select-game="selectGame"></slider-grid>
-
   </div>
 
 </template>

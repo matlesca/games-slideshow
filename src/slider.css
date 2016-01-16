@@ -13,6 +13,7 @@
 
 .content-wrapper {
   position: relative; display: table-cell;
+  overflow:hidden;
   /* hide the slide content if the slide is not selected/visible */
   opacity: 0;
   border-radius: inherit;
@@ -31,6 +32,7 @@
   vertical-align: middle;
   text-align: center;
   padding:0 20% 0 20%;
+  overflow: hidden;
 }
 .scroll-bottom-info {
   position: absolute; bottom: 20px;
@@ -45,6 +47,14 @@
   margin-top:-25px;
 }
 
+.screenshot {position: absolute;top:0;left:0;width:100vw}
+.screenshot-caption {
+  position: absolute;
+  right:0; bottom:0;
+  padding:20px;
+  text-align:right;
+  opacity:0.9;
+}
 
 .dl-button button {
   position: absolute; left: 50%; bottom: 50px;

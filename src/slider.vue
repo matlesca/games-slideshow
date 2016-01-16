@@ -1,12 +1,23 @@
 <template>
 	<div class="content-wrapper" v-bind:style="{'background-color':game.bckColor}" v-on:click="selectSlide">
 		<div class="table-wrap">
-			<div class="content-center">
+			<!-- Centered content for intro slides : -->
+			<div class="content-center" v-if="slide.type === 'info'">
 				<h2>{{game.name}}</h2>
-				<em v-show="game.hash !== 'intro' && slide.type === 'info'">{{game.date}}</em>
+				<em v-show="game.hash !== 'intro'">{{game.date}}</em>
 				<p>{{slide.content}}</p>
 			</div>
 		</div>
+
+		<!-- Screenshot slide ? -->
+		<!-- <img src="img/LMS1.png" alt="" class="screenshot" /> -->
+		<img class="screenshot" v-if="slide.type === 'screenshot'" v-bind:src="screenUrl" alt="Screenshot" />
+		<div class="screenshot-caption" v-if="slide.type === 'screenshot'" v-bind:style="{'background-color':game.bckColor}">
+			<em class="screenshot-caption-text">
+				{{slide.desc}}
+			</em>
+		</div>
+
 
 		<!-- Scrolling helpers : -->
 		<div class="scroll-bottom-info" v-show="game.hash === 'intro'">
@@ -50,7 +61,17 @@
 				selectSlide: function () {
 					this.$dispatch('select-game', [this.rank, this.game.slides.indexOf(this.slide)])
 				}
+		},
+		created: function () {
+			if (this.slide.type === 'screenshot' && this.slide.url) {
+				this.screenUrl = require('./img/' + this.slide.url)
 			}
-		}
+		},
+		data () {
+      return {
+        screenUrl: ''
+      }
+    }
+	}
 
 </script>
