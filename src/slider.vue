@@ -9,15 +9,13 @@
 			</div>
 		</div>
 
-		<!-- Screenshot slide ? -->
-		<!-- <img src="img/LMS1.png" alt="" class="screenshot" /> -->
-		<img class="screenshot" v-if="slide.type === 'screenshot'" v-bind:src="screenUrl" alt="Screenshot" />
+		<!-- Screenshot slide + lazy image loading -->
+		<img class="screenshot" v-if="slide.type === 'screenshot' && screenUrl" v-bind:src="screenUrl" alt="Screenshot" />
 		<div class="screenshot-caption" v-if="slide.type === 'screenshot'" v-bind:style="{'background-color':game.bckColor}">
 			<em class="screenshot-caption-text">
 				{{slide.desc}}
 			</em>
 		</div>
-
 
 		<!-- Scrolling helpers : -->
 		<div class="scroll-bottom-info" v-show="game.hash === 'intro'">
@@ -62,11 +60,13 @@
 					this.$dispatch('select-game', [this.rank, this.game.slides.indexOf(this.slide)])
 				}
 		},
-		created: function () {
-			if (this.slide.type === 'screenshot' && this.slide.url) {
-				this.screenUrl = require('./img/' + this.slide.url)
-			}
-		},
+    events: {
+      'change-slide': function (locTab) {
+        if (locTab[0] === this.rank) {
+					this.screenUrl = this.slide.url
+				}
+      }
+    },
 		data () {
       return {
         screenUrl: ''

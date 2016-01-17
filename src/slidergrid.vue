@@ -28,9 +28,11 @@
       onSlideChange: function (msp) {
 				if (this.horizontalSwipers.length) {
 					this.$dispatch('select-game', [msp.activeIndex, this.horizontalSwipers[msp.activeIndex].activeIndex])
+					this.$broadcast('change-slide', [msp.activeIndex, this.horizontalSwipers[msp.activeIndex].activeIndex])
 				} else {
-					// case when a slide change occurs before horizontal swipers are instanciated
+					// case when a vertical slide change occurs before horizontal swipers are instanciated
 					this.$dispatch('select-game', [msp.activeIndex, 0])
+					this.$broadcast('change-slide', [msp.activeIndex, 0])
 				}
       }
 		},

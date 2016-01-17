@@ -28,8 +28,8 @@
       "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Little%20Miss%20Sunshine%20-%20le%20jeu.zip",
       "slides" : [
         {"type" : "info", "content" : "Shmup game based on the self-titled movie."},
-        {"type" : "screenshot", "url" : "LMS1.png", "desc" : "You control the minivan of Olive's family and got to avoid other vehicles on the road."},
-        {"type" : "screenshot", "url" : "LMS2.png", "desc" : "The landscape elements appear in sync with the music."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/LMS1.png", "desc" : "You control the minivan of Olive's family and got to avoid other vehicles on the road."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/LMS2.png", "desc" : "The landscape elements appear in sync with the music."},
         {"type" : "screenshot", "url" : "", "desc" : "Includes a hardcore mode where you have to hit as many cows on the road as possible."}
       ]
     },
