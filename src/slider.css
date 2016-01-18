@@ -1,7 +1,7 @@
  .slide-content {
   position: absolute; display: table;
   /*top:0;*/
-  width: 86vw; height: 77vh;
+  width: 78vw; height: 77vh;
   margin: 0 2vw;
   border-radius: 10px;
   opacity: 0;
@@ -47,7 +47,13 @@
   margin-top:-25px;
 }
 
-.screenshot {position: absolute;top:0;left:0;width:100vw}
+.screenshot {
+  display: block;
+  position: absolute;top: 0; bottom:0; left: 0; right:0;
+  margin: auto; margin-top:0;
+  max-width:100%;
+  max-height: 100%;
+}
 .screenshot-caption {
   position: absolute;
   right:0; bottom:0;
@@ -77,7 +83,13 @@
   .content-wrapper {padding:0 5% 0 5%;}
   .scroll-bottom-info span {display:none}
   .slide-content {
-    width: 90vw; height: 80vh;
+    width: 90vw; height: 90vh;
     margin: 0 2vw;
+  }
+  .dl-button {display: none;}
+  .screenshot {
+    left: -9999px; right: -9999px;
+    margin-left:auto; margin-right: auto;
+    max-height: 100%; max-width: 150%;
   }
 }

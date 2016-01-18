@@ -16,8 +16,8 @@
       "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Poligon.zip",
       "slides" : [
         {"type" : "info", "content" : "Puzzle game."},
-        {"type" : "screenshot", "url" : "", "desc" : "You have to guide small balls throughout the levels using mouse-drawn polygons."},
-        {"type" : "screenshot", "url" : "", "desc" : "The 8 levels make use of gravity, speed, fire/water/ice interaction."}
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/POL1.png", "desc" : "You have to guide small balls throughout the levels using mouse-drawn polygons."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/POL2.png", "desc" : "The 8 levels make use of gravity, speed, fire/water/ice interaction."}
       ]
     },
     {
@@ -27,10 +27,10 @@
       "bckColor": "#cfdb67",
       "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Little%20Miss%20Sunshine%20-%20le%20jeu.zip",
       "slides" : [
-        {"type" : "info", "content" : "Shmup game based on the self-titled movie."},
-        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/LMS1.png", "desc" : "You control the minivan of Olive's family and got to avoid other vehicles on the road."},
+        {"type" : "info", "content" : "Shmup game."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/LMS1.png", "desc" : "Based on the movie's plot. Your minivan has to avoid other vehicles and reach the end of the level."},
         {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/LMS2.png", "desc" : "The landscape elements appear in sync with the music."},
-        {"type" : "screenshot", "url" : "", "desc" : "Includes a hardcore mode where you have to hit as many cows on the road as possible."}
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/LMS3.png", "desc" : "Includes a hardcore mode where you have to hit as many cows on the road as possible."}
       ]
     },
     {
@@ -41,8 +41,8 @@
       "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Missed%20the%20Boat.zip",
       "slides" : [
         {"type" : "info", "content" : "Fishing game."},
-        {"type" : "screenshot", "url" : "", "desc" : "3 kind of baits allow you to catch 4 kinds of fish."},
-        {"type" : "screenshot", "url" : "", "desc" : "A piece from Modest Mouse is used as a soundtrack. The waves and the boat move in sync with it."}
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/MTB1.png", "desc" : "3 kinds of bait allow you to catch 4 kinds of fish."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/MTB2.png", "desc" : "A piece from Modest Mouse is used as a soundtrack. The waves and the boat move in sync with it."}
       ]
     },
     {
@@ -53,9 +53,9 @@
       "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Space%20Oddity%20-%20the%20game.zip",
       "slides" : [
         {"type" : "info", "content" : "Shmup game."},
-        {"type" : "screenshot", "url" : "", "desc" : "In the first part of the game you prepare the rocket before launch, adding bonuses like speed, resistance, etc."},
-        {"type" : "screenshot", "url" : "", "desc" : "Once in space the goal is to clean the waste left by broken satellites using a giant vacuum cleaner."},
-        {"type" : "screenshot", "url" : "", "desc" : "Bowies music inspired the story and is used as a soundtrack. Lyrics appear at the bottom like a Karaoke."}
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/SPO1.png", "desc" : "In the first part of the game you prepare the shuttle before launch, adding bonuses like speed, resistance, etc."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/SPO2.png", "desc" : "Once in space the goal is to clean the waste left by broken satellites using a giant vacuum cleaner."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/SPO3.png", "desc" : "Bowie's music inspired the story and is used as a soundtrack. Lyrics appear on the screen like a Karaoke."}
       ]
     },
     {
@@ -66,9 +66,9 @@
       "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/A%20chinese%20Story%20-%20Une%20histoire%20chinoise.zip",
       "slides" : [
         {"type" : "info", "content" : "Platformer game."},
-        {"type" : "screenshot", "url" : "", "desc" : "It tells the story of a youg farmer who participates in the communist revolution led by Mao in the early 20st century."},
-        {"type" : "screenshot", "url" : "", "desc" : "The game alternates between challenges & missions taking you throughout China."},
-        {"type" : "screenshot", "url" : "", "desc" : "A Chinese Story is only available as a demo for now."}
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/ACS1.png", "desc" : "It tells the story of a youg Chinese farmer who participates in the communist revolution led by Mao in the early 20st century."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/ACS2.png", "desc" : "The game alternates between challenges & missions taking you throughout China."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/ACS3.png", "desc" : "A Chinese Story is only available as a demo for now."}
       ]
     },
     {
@@ -79,9 +79,9 @@
       "dl_url": "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/Ilium_EN.zip",
       "slides" : [
         {"type" : "info", "content" : "Shooter game."},
-        {"type" : "screenshot", "url" : "", "desc" : "It is an adaptation of the story from Homer, but in a futuristic world."},
-        {"type" : "screenshot", "url" : "", "desc" : "You need to protect a city from incoming tanks/rockets using a colored light projector."},
-        {"type" : "screenshot", "url" : "", "desc" : "After finishing the 4 main levels, 2 hardcore modes are available : no bonuses or sudden-death."}
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/ILL1.png", "desc" : "You need to protect a city from incoming tanks/rockets using a colored light projector."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/ILL2.png", "desc" : "It is an adaptation of the story from Homer, but in a futuristic world."},
+        {"type" : "screenshot", "url" : "https://dl.dropboxusercontent.com/u/57349004/Arkanisa%20-%20GM%20compilation/screenshots/ILL3.png", "desc" : "After finishing the 4 main levels, 2 hardcore modes are available : no bonuses or sudden-death."}
       ]
     }
 ]

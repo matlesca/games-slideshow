@@ -25,8 +25,9 @@ html, body {
 .vertical-slider {
   padding: 140px 0px 20px 0px;
 }
-.horizontal-slider .swiper-slide {width:90vw;}
+.horizontal-slider .swiper-slide {width:82vw;}
 @media only screen and (max-width: 768px) {
-  .vertical-slider {padding-top:100px;height: 80vh;}
-  .horizontal-slider .swiper-slide {width:92vw;}
+  .vertical-slider {padding:0; padding-top:50px;height: 92vh;}
+  .horizontal-slider {height: 92vh;}
+  .horizontal-slider .swiper-slide {width:92vw; height: 92vh;}
 }

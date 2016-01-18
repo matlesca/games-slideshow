@@ -126,8 +126,10 @@
 .timeline-navigation .inactive path {fill: #2b2c2e;}*/
 
 @media only screen and (max-width: 768px) {
-  .events .month-mobile {display:inline-block}
+  .events .month-mobile {display:inline-block; padding-bottom: 13px;}
   .events a::after, .events a {display: none;}
-  .timeline-center {left:20%; right: 20%;}
+  .timeline-bar {height: 40px; min-height: 0; padding-top: 5px;}
+  .timeline-center {height: 40px; left:0; right:0; bottom: 0;margin:0;}
+  .events {top: auto; bottom: 0;}
   .timeline-navigation a {max-width:16%;}
 }
